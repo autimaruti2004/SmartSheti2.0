@@ -1,0 +1,10 @@
+{
+  "District A": {
+    "Sub A1": ["Village A1a", "Village A1b"],
+    "Sub A2": ["Village A2a", "Village A2b"]
+  },
+  "District B": {
+    "Sub B1": ["Village B1a", "Village B1b"],
+    "Sub B2": ["Village B2a"]
+  }
+}

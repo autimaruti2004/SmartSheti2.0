@@ -18,7 +18,7 @@ function signToken(user) {
 
 async function register(req, res) {
   try {
-    const { name, address, mobile, email, gender, password } = req.body || {};
+    const { name, address, mobile, countryCode, district, subDistrict, village, email, gender, password } = req.body || {};
     if (!name || !mobile || !password) {
       return res.status(400).json({ message: 'name, mobile and password are required' });
     }
@@ -28,10 +28,10 @@ async function register(req, res) {
       return res.status(409).json({ message: 'Mobile already registered' });
     }
 
-    const user = await createUser({ name, address, mobile, email, gender, password });
+    const user = await createUser({ name, address, mobile, countryCode, district, subDistrict, village, email, gender, password });
     const token = signToken(user);
 
-    // Welcome email पाठवा
+    // Welcome email
     if (email) {
       try {
         await EmailService.sendWelcomeEmail(email, name);
@@ -43,7 +43,7 @@ async function register(req, res) {
 
     return res.status(201).json({
       token,
-      user: { _id: user._id, name, address, mobile, email: email || null, gender: gender || null },
+      user: { _id: user._id, name, address, mobile: user.mobile, countryCode: user.countryCode || null, district: user.district || null, subDistrict: user.subDistrict || null, village: user.village || null, email: email || null, gender: gender || null },
     });
   } catch (err) {
     if (err && err.code === 11000) {

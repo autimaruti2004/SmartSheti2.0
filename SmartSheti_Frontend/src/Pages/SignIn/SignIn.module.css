@@ -1,5 +1,3 @@
-/* Sign In page styles - aligned with SignUp look */
-
 .loginContainer {
   min-height: 100vh;
   width: 100%;
@@ -7,7 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #a8e6cf 0%, #3bb78f 100%);
+  /* background: linear-gradient(135deg, #a8e6cf 0%, #3bb78f 100%); */
 }
 
 .loginBox {

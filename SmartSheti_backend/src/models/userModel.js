@@ -15,6 +15,19 @@ const userSchema = new mongoose.Schema({
         required: [true, 'Please provide your mobile number'],
         unique: true
     },
+    countryCode: {
+        type: String,
+        default: '+91'
+    },
+    district: {
+        type: String
+    },
+    subDistrict: {
+        type: String
+    },
+    village: {
+        type: String
+    },
     email: {
         type: String,
         unique: true,

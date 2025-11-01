@@ -14,6 +14,7 @@ const SignIn = ({ title = "Sign in to your account", logoText = "SmartSheti" }) 
   const { login } = useAuth();
 
   const [mobile, setMobile] = useState("");
+  const [countryCode, setCountryCode] = useState('+91');
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -21,8 +22,9 @@ const SignIn = ({ title = "Sign in to your account", logoText = "SmartSheti" }) 
 
   const validate = () => {
     if (!mobile.trim()) return "Please enter your mobile number";
-    const digits = mobile.replace(/\D/g, "");
-    if (digits.length < 10) return "Please enter a valid 10-digit mobile number";
+    // combine country code and mobile for validation
+    const combined = (countryCode + mobile).replace(/\D/g, "");
+    if (combined.length < 10) return "Please enter a valid mobile number with country code";
     if (!password) return "Please enter your password";
     if (password.length < 6) return "Password must be at least 6 characters";
     return "";
@@ -39,7 +41,9 @@ const SignIn = ({ title = "Sign in to your account", logoText = "SmartSheti" }) 
 
     setLoading(true);
     try {
-      const data = await auth.login(mobile, password);
+  // send mobile with selected country code
+  const fullMobile = `${countryCode}${mobile}`;
+  const data = await auth.login(fullMobile, password);
 
       // Store the JWT token
       if (data && data.token) localStorage.setItem('token', data.token);
@@ -80,17 +84,32 @@ const SignIn = ({ title = "Sign in to your account", logoText = "SmartSheti" }) 
         </h2>
 
         <label className={styles.label} htmlFor="mobile">Mobile number</label>
-        <input
-          id="mobile"
-          name="mobile"
-          inputMode="numeric"
-          autoComplete="tel"
-          value={mobile}
-          onChange={(e) => setMobile(e.target.value)}
-          type="text"
-          placeholder="Mobile No"
-          className={styles.inputBox}
-        />
+        <div style={{ display: 'flex', gap: 8 }}>
+          <select
+            aria-label="country code"
+            value={countryCode}
+            onChange={(e) => setCountryCode(e.target.value)}
+            className={styles.inputBox}
+            style={{ width: 120 }}
+          >
+            <option value="+91">India (+91)</option>
+            <option value="+1">USA (+1)</option>
+            <option value="+44">UK (+44)</option>
+            <option value="+61">Australia (+61)</option>
+          </select>
+          <input
+            id="mobile"
+            name="mobile"
+            inputMode="numeric"
+            autoComplete="tel"
+            value={mobile}
+            onChange={(e) => setMobile(e.target.value)}
+            type="text"
+            placeholder="Mobile No"
+            className={styles.inputBox}
+            style={{ flex: 1 }}
+          />
+        </div>
 
         <label className={styles.label} htmlFor="password">Password</label>
         <input
@@ -105,7 +124,7 @@ const SignIn = ({ title = "Sign in to your account", logoText = "SmartSheti" }) 
 
         <div className={styles.row}>
           <label className={styles.remember}><input type="checkbox" checked={remember} onChange={(e)=>setRemember(e.target.checked)} /> Remember me</label>
-          <Link to="#" className={styles.footerLink}>Forgot Password</Link>
+          <Link to="/forgot-password" className={styles.footerLink}>Forgot Password</Link>
         </div>
 
         {error && <div className={styles.error} role="alert" aria-live="assertive">{error}</div>}

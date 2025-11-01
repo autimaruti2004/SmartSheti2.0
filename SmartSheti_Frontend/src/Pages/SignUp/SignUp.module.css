@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #a8e6cf 0%, #3bb78f 100%);
+  /* background: linear-gradient(135deg, #a8e6cf 0%, #3bb78f 100%); */
 }
 
 .signupBox {
@@ -14,7 +14,7 @@
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 450px;
+  max-width: 40%;
   text-align: center;
   margin: auto;
 }

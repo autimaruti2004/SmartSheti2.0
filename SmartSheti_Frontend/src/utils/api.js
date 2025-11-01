@@ -56,6 +56,32 @@ export const auth = {
         })
 };
 
+// Password reset API utilities
+// Password reset: backend routes are mounted under /api/password
+export const forgotPasswordEmail = (email) =>
+    apiCall('/password/forgot-password', {
+        method: 'POST',
+        body: JSON.stringify({ email })
+    });
+
+export const verifyEmailToken = (token, newPassword) =>
+    apiCall('/password/reset-password', {
+        method: 'POST',
+        body: JSON.stringify({ token, newPassword })
+    });
+
+export const forgotPasswordMobile = (mobile) =>
+    apiCall('/password/forgot-password-mobile', {
+        method: 'POST',
+        body: JSON.stringify({ mobile })
+    });
+
+export const verifyMobileOTP = (mobile, otp, newPassword) =>
+    apiCall('/password/reset-password-mobile', {
+        method: 'POST',
+        body: JSON.stringify({ mobile, otp, newPassword })
+    });
+
 // Add other API utilities for different features
 export const user = {
     updateProfile: (userData) =>
@@ -100,4 +126,12 @@ export const cropAdvice = {
 export const schemes = {
     getSchemes: () => apiCall('/schemes'),
     getSchemeById: (id) => apiCall(`/schemes/${encodeURIComponent(id)}`),
+};
+
+// Locations API
+export const locations = {
+    getDistricts: () => apiCall('/locations/districts'),
+    getSubdistricts: (district) => apiCall(`/locations/subdistricts?district=${encodeURIComponent(district)}`),
+    getVillages: (district, subDistrict) => apiCall(`/locations/villages?district=${encodeURIComponent(district)}&subDistrict=${encodeURIComponent(subDistrict)}`),
+    getTree: () => apiCall('/locations/tree')
 };

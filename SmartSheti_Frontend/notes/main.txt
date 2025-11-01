@@ -8,3 +8,15 @@ we can provide a services for farmers
 demo API:-> https://mockapi.io/projects
 
 implement the simple authentication system in smartsheti, i have given you folders as well as index.js in backend, create files and folders which you will need, 
+
+npm start // run the  backend
+npm run dev // run the frontend
+
+we are working on
+    real time OTP verification
+    auto complete application for government schemes
+    chatbot 
+    farmers community
+    real time market all over maharashtra
+    time to time give updates when farmer is register on our portal
+    Admin can able to send messages to farmer
