@@ -1,0 +1,235 @@
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 40px 0 60px 0;
+  box-sizing: border-box;
+  background: #f5fff8ba;
+}
+
+/* Hero map section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, #e8f8ee, #eaf7ff);
+}
+
+.mapImage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 220px;
+  opacity: 0.18;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.06));
+}
+
+.heroOverlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 28px;
+  color: #0b5a2e;
+  margin: 0 0 6px 0;
+}
+
+.heroSubtitle {
+  color: #2f6b45;
+  margin: 0 0 12px 0;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.primaryBtn {
+  background: #049a3b;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.secondaryBtn {
+  background: transparent;
+  border: 2px solid #049a3b;
+  color: #049a3b;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Title + Subtitle */
+.title {
+  font-size: 36px;
+  margin: 6px 0;
+  color: #0b5a2e;
+  font-weight: 800;
+  text-align: center;
+}
+
+.subtitle {
+  color: #2f6b45;
+  margin: 8px 0 28px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Grid — Now full page width cards */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  width: 100%;
+  max-width: 100%;
+  align-items: stretch;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.card {
+  background-color: #ffffff67;
+  border-radius: 0;
+  cursor: pointer;
+  transition: transform 260ms ease, box-shadow 260ms ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.card:hover .cardOverlay {
+  transform: translateY(-10px);
+}
+
+.card:focus {
+  outline: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cardOverlay {
+  width: 100%;
+  padding: 18px 20px;
+  color: #3d6c39;
+  background: rgba(8, 7, 7, 0.068);
+  backdrop-filter: blur(8px);
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.cardOverlay .cardTitle {
+  color: #0b5a2e;
+  font-size: 24px;
+  margin-bottom: 8px;
+  /* text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8); */
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.cardOverlay .cardTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #049a3b;
+  border-radius: 2px;
+}
+
+.cardOverlay .cardDesc {
+  color: #2f6b45;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Remove old green tint shadows */
+.weatherCard,
+.soilCard,
+.cropCard,
+.schemeCard,
+.marketCard {
+  box-shadow: none;
+}
+
+/* Table Styling */
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6px;
+}
+
+.dataTable th,
+.dataTable td {
+  border: 0;
+  padding: 6px 8px;
+  text-align: left;
+  font-size: 14px;
+  color: #2f6b45;
+}
+
+.dataTable thead th {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.dataTable tbody tr:nth-child(odd) {
+  background: rgba(240, 250, 240, 0.6);
+}
+
+/* Image for cards (if used) */
+.image {
+  width: 120px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .title {
+    font-size: 26px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    min-height: 240px;
+  }
+}

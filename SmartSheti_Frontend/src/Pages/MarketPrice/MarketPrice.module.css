@@ -1,0 +1,133 @@
+.container {
+  max-width: 90%;
+  margin: 40px auto;
+  margin-top: 90px;
+
+  background: linear-gradient(180deg, #fbfff7, #f7fbf9);
+  padding: 20px 22px;
+  border-radius: 12px;
+}
+
+.heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: left;
+  color: #1b5e20;
+  margin: 0;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.search {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  min-width: 220px;
+}
+.search:focus {
+  outline: none;
+  box-shadow: 0 0 0 6px rgba(4, 154, 59, 0.08);
+  border-color: #049a3b;
+}
+.exportBtn {
+  background: #049a3b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.exportBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(4, 154, 59, 0.12);
+}
+.clearBtn {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.clearBtn:hover {
+  background: #fff8f4;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin-bottom: 14px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+  background: #fff;
+}
+.table th,
+.table td {
+  border: 1px solid #e6eef0;
+  padding: 10px 12px;
+  text-align: left;
+}
+.table th {
+  background: linear-gradient(180deg, #e8f7e8, #e1f1e1);
+  color: #1b4f2d;
+  font-weight: 700;
+}
+.table tbody tr:nth-child(even) {
+  background: #fbfbfd;
+}
+.table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.price {
+  font-weight: 700;
+  color: #bf360c;
+}
+
+.highlight {
+  background: rgba(255, 235, 59, 0.9);
+  color: #111;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.note {
+  color: #bf360c;
+  text-align: right;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+.noResults {
+  text-align: center;
+  color: #666;
+  padding: 18px;
+}
+
+@media (max-width: 720px) {
+  .table {
+    min-width: 520px;
+  }
+}
+
+@media (max-width: 420px) {
+  .topRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .heading {
+    text-align: left;
+  }
+}

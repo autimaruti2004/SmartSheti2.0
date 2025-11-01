@@ -1,0 +1,10 @@
+https://agriwelfare.gov.in/en/Major // for schemes
+https://schemes.vikaspedia.in/viewcontent/schemesall/schemes-for-farmers?lgn=en // for schemes reference
+crop with background image and there description
+umang gov app for reference 
+AI chatbot for recommendation 
+we can provide a services for farmers
+
+demo API:-> https://mockapi.io/projects
+
+implement the simple authentication system in smartsheti, i have given you folders as well as index.js in backend, create files and folders which you will need, 

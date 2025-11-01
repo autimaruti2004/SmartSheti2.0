@@ -1,0 +1,147 @@
+.signupContainer {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #a8e6cf 0%, #3bb78f 100%);
+}
+
+.signupBox {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  margin: auto;
+}
+
+.logo {
+  color: #1a5f7a;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.title {
+  color: #2c5282;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.inputBox {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 12px 0;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: -apple-system, system-ui, sans-serif;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.inputBox:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+  background-color: white;
+}
+
+.inputBox::placeholder {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+select.inputBox {
+  background: white;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 25px;
+  border: none;
+  background: #2b6cb0;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.btn:hover {
+  background: #2c5282;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 108, 176, 0.25);
+}
+
+.btn:disabled {
+  background: #90cdf4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.footerText {
+  font-size: 14px;
+  margin-top: 25px;
+  color: #4a5568;
+}
+
+.footerLink {
+  text-decoration: none;
+  font-weight: 600;
+  color: #2b6cb0;
+  margin-left: 5px;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: #2c5282;
+  text-decoration: underline;
+}
+
+.error {
+  color: #dc2626;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 16px 0;
+  font-size: 14px;
+  text-align: left;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.success {
+  color: #059669;
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 16px 0;
+  font-size: 14px;
+  text-align: left;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Stylized placeholder silhouette for Maharashtra -->
+  <g fill="#2f7a3e" stroke="#145a2a" stroke-width="3">
+    <path d="M120 320 C100 300, 110 250, 150 230 C190 210, 220 190, 260 180 C300 170, 340 160, 380 170 C420 180, 440 210, 470 230 C500 250, 520 280, 560 290 C600 300, 620 330, 600 360 C580 390, 540 420, 500 430 C460 440, 420 435, 380 440 C340 445, 300 460, 260 460 C220 460, 180 440, 150 410 C130 390, 120 350, 120 320 Z"/>
+  </g>
+  <text x="50%" y="92%" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#155729" text-anchor="middle">Maharashtra (map)</text>
+</svg>

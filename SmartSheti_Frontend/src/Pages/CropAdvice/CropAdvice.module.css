@@ -1,0 +1,41 @@
+.container {
+  background: linear-gradient(to bottom, #d4f1f9, #eafaf1);
+  background-image: url("/images/farm-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  width: 80%;
+  max-width: 650px;
+  color: #333;
+}
+
+h2 {
+  color: #00754a;
+  border-bottom: 2px solid #00754a;
+  padding-bottom: 10px;
+}
+
+.dropdown {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #00754a;
+  width: 100%;
+  font-size: 16px;
+}
+
+.details p {
+  line-height: 1.6;
+  margin: 8px 0;
+}

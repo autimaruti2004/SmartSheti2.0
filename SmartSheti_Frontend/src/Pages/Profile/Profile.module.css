@@ -1,0 +1,16 @@
+.container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  width: 420px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  padding: 22px;
+}
+.info p { margin: 8px 0; }
+.actions { display:flex; gap:10px; margin-top:16px; }
+.btn { padding:10px 12px; background:#2e7d32; color:#fff; border:none; border-radius:8px; cursor:pointer }
+.btnOutline { padding:10px 12px; background:transparent; color:#b00020; border:1px solid #f0c; border-radius:8px; cursor:pointer }

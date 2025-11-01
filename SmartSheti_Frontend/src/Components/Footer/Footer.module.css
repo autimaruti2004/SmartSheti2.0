@@ -1,0 +1,105 @@
+.footer {
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  padding: 40px 60px;
+  border-top: 2px solid #cde0b3;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.section h3 {
+  color: #8bb31d;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.section p,
+.section li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.subHeading {
+  color: #8bb31d;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.appImg {
+  display: block;
+  margin-top: 8px;
+  width: 140px;
+  cursor: pointer;
+}
+
+.bioLogo {
+  margin-top: 10px;
+  width: 120px;
+}
+
+.bottom {
+  border-top: 1px solid #d8e0c2;
+  margin-top: 30px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.socials span {
+  margin-left: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.socials span:hover {
+  transform: scale(1.2);
+}
+
+/* ✅ Responsive Design */
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .section h3 {
+    font-size: 16px;
+  }
+
+  .section p,
+  .section li {
+    font-size: 13px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
